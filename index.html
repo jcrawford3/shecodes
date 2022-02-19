@@ -8,12 +8,15 @@
       crossorigin="anonymous"
     />
     <meta charset="UTF-8" />
-    <link href="src/style.css" rel="stylesheet">
+ 
     
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link href="src/style.css" rel="stylesheet">
+
     <title>What's the Weather?</title>
   </head>
   <body>
@@ -21,9 +24,13 @@
     <div class="container">
       <div class="weather-app">
       <h1 id="city"></h1>
-      <h2 id="temperature">25°F</h2>
+      <h2><span id="temperature">25</span>°F | °C</h2>
       <h3>Weekly Forecast</h3>
       <div class="row">
+        <ul>
+          <li>Humidity:</li>
+          <li>Wind:</li>
+        </ul>
         <div class="col">
           Monday
         <ul>
@@ -36,20 +43,20 @@
           Tuesday
         <ul>
           <li>
-            23 / 20
+            23° / 20°
           </li>
           </div>
         <div class="col">
           Wednesday
         <ul>
-          <li>23 / 20</li>
+          <li>23° / 20°</li>
         </ul>
           </div>
         <div class="col">
           Thursday
         <ul>
           <li>
-            23 / 20
+            23° / 20°
           </li>
         </ul>
         </div>
@@ -57,7 +64,7 @@
           Friday
         <ul>
           <li>
-            23 / 20
+            23° / 20°
             </li>
             </ul>
         </div>
@@ -65,7 +72,7 @@
           Saturday
         <ul>
           <li> 
-            23 / 20
+            23° / 20°
           </li>
         </ul>
       </div>
@@ -74,18 +81,9 @@
       <input type="text" id="city-text-input" placeholder="enter a city"><input type="submit" value="Search">
       </form>
       <button type="button" class="btn btn-secondary" id="current-location-btn">Locate Me</button>
-      <div class="form-check form-switch">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDefault"
-        />
-        <label class="form-check-label" for="flexSwitchCheckDefault"
-          >Convert to °C</label
-        >
+    
       </div>
-      </div>
+        <a href="https://github.com/jcrawford3/shecodes.git">Open-Source Code</a> by Jamie Crawford
     </div>
  <script src="script.js"></script>
   </body>
