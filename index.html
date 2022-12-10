@@ -8,51 +8,61 @@
       crossorigin="anonymous"
     />
     <meta charset="UTF-8" />
- 
-    
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link href="src/style.css" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet" />
 
     <title>What's the Weather?</title>
   </head>
   <body>
-        
     <div class="container">
       <div class="weather-app">
-      <h1 id="city"></h1>
-      <h2><span id="temperature">25</span>°F | °C</h2>
-      <h3>Weekly Forecast</h3>
-      <div class="row">
-        <ul>
-          <li>Humidity: <span id="humidity"></span>%</li>
-          <li>Wind: <span id="wind"></span> km/hr</li>
-        </ul>
-        <div class="weather-forecast" id="weather">
-        <div class="col">
-          <div class="weather-forecast-date">Monday</div>
-          <img src="http://openweathermap.org/img/wn/04d@2x.png" width="40"/>
-          <div class="weather-forecast-temperatures">
-        <ul>
-          <li>
-            <span class="weather-forecast-temperature-max">54</span> / <span class="weather-forecast-temperature-min">50</span>
-            </li>
-            </ul>
+        <h1 id="city"></h1>
+        <h2><span id="temperature">25</span>°F | °C</h2>
+        <h3>Weekly Forecast</h3>
+        <div class="row">
+          <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/hr</li>
+          </ul>
+        </div>
+      </div>
+      <div class="weather-forecast" id="forecast">
+        <div class="row">
+          <div class="col-2">
+            <div class="weather-forecast-date">Monday</div>
+            <img
+              src="http://openweathermap.org/img/wn/04d@2x.png"
+              alt=""
+              width="40"
+            />
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperature-max"> 54°</span>
+              <span class="weather-forecast-temperature-min"> 50°</span>
+            </div>
           </div>
-        
+        </div>
+        <form id="input-city">
+          <input
+            type="text"
+            id="city-text-input"
+            placeholder="enter a city"
+          /><input type="submit" value="Search" />
+        </form>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="current-location-btn"
+        >
+          Locate Me
+        </button>
       </div>
-      </div>
-      <form id="input-city">
-      <input type="text" id="city-text-input" placeholder="enter a city"><input type="submit" value="Search">
-      </form>
-      <button type="button" class="btn btn-secondary" id="current-location-btn">Locate Me</button>
-    
-      </div>
-        <a href="https://github.com/jcrawford3/shecodes.git">Open-Source Code</a> by Jamie Crawford
+      <a href="https://github.com/jcrawford3/shecodes.git">Open-Source Code</a>
+      by Jamie Crawford
     </div>
- <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
