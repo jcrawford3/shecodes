@@ -29,7 +29,7 @@ function showTemperature(response) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#Forecast");
+  let forecastElement = document.querySelector("#forecast");
 
   forecastElement.innerHTML = "Forecast";
 }
