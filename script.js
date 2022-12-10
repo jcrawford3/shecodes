@@ -28,6 +28,12 @@ function showTemperature(response) {
   );
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#Forecast");
+
+  forecastElement.innerHTML = "Forecast";
+}
+
 function searchCity(city) {
   let apiKey = "0821ab50d69ba23a98b1bd9d0cf0c1e4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
