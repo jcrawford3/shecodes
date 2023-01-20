@@ -16,7 +16,7 @@ function formatDate() {
   let hours = now.getHours();
   let minutes = now.getMinutes();
 
-  h3.innerHTML = `Today is ${day} ${hours}:${minutes}`;
+  h3.innerHTML = `Last updated ${day} ${hours}:${minutes}`;
 }
 
 formatDate();
@@ -31,9 +31,27 @@ function showTemperature(response) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "";
-  forecastHTML = `<div class="row">
-            <div class="col-9">
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+            <div class="col-2">
+              <div class="weather-forecast-date">Monday</div>
+              <img
+                src="https://openweathermap.org/img/wn/04d@2x.png"
+                alt=""
+                width="40"
+              />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max"> 54°</span>
+                <span class="weather-forecast-temperature-min"> 50°</span>
+              </div>
+            </div>
+            `;
+  forecastHTML =
+    forecastHTML +
+    `
+            <div class="col-2">
               <div class="weather-forecast-date">Monday</div>
               <img
                 src="https://openweathermap.org/img/wn/04d@2x.png"
@@ -46,6 +64,8 @@ function displayForecast() {
               </div>
             </div>
           </div>`;
+
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
